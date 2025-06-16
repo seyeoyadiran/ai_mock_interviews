@@ -21,20 +21,24 @@ const page = () => {
             </div>
             <Image src="/robot.png" alt="robot-dude" width={400} height={400} className="max-sm:hidden" />
         </section>
-        <section className="flex flex-col gap-6 mt-8">
+        <section className="flex flex-col gap-3 mt-8">
             <h2 > Your Interviews </h2>
-            <div className="interviews-section">
-                {dummyInterviews.map((interview) => (
-                    <InterviewCard {...interview} key ={interview.id}/>
-                ))}
+            <div className="overflow-x-auto whitespace-nowrap p-4 no-scrollbar ">
+                <div className="flex gap-4">
+                        {dummyInterviews.map((interview) => (
+                            <InterviewCard {...interview} key={interview.id}/>
+                        ))}
+                </div>
             </div>
         </section>
-        <section className="flex flex-col gap-6 mt-8">
+        <section className="flex flex-col gap- mt-8">
             <h2> Take an Interview </h2>
-            <div className="interviews-section">
+            <div className="overflow-x-auto whitespace-nowrap p-4 no-scrollbar ">
+                <div className="flex gap-4">
                 {dummyInterviews.map((interview) => (
                     <InterviewCard {...interview} key ={interview.id}/>
                 ))}
+                </div>
                 <p> You haven't taken any interviews yet</p>
             </div>
         </section>
